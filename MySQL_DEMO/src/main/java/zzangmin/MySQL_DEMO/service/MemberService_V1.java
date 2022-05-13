@@ -15,13 +15,15 @@ public class MemberService_V1 {
 
     @Transactional // (exclude = {validateForm(), sendEmail())
     public void join(Member member) {
-        //transaction begin
+//transaction begin
 
         validateForm(member);
-        memberRepository.save(member);
-        sendEmail(member);
 
-        //commit, transaction end
+        memberRepository.save(member);
+
+        sendEmail(member); //if exception ?
+//commit, transaction end
+
     }
 
     private void sendEmail(Member member) {
