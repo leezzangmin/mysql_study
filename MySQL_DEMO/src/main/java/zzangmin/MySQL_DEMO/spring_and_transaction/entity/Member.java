@@ -1,5 +1,4 @@
-package zzangmin.MySQL_DEMO.entity;
-
+package zzangmin.MySQL_DEMO.spring_and_transaction.entity;
 
 import lombok.Data;
 
@@ -9,9 +8,10 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Item {
+public class Member {
 
     @Id @GeneratedValue
-    private Long id;
-    private String name;
+    public Long id;
+
+    public String name;
 }

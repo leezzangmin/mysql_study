@@ -1,11 +1,11 @@
-package zzangmin.MySQL_DEMO.controller;
+package zzangmin.MySQL_DEMO.spring_and_transaction.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
-import zzangmin.MySQL_DEMO.entity.Member;
-import zzangmin.MySQL_DEMO.service.MemberService_V1;
-import zzangmin.MySQL_DEMO.service.MemberService_V2;
+import zzangmin.MySQL_DEMO.spring_and_transaction.entity.Member;
+import zzangmin.MySQL_DEMO.spring_and_transaction.service.MemberService_V1;
+import zzangmin.MySQL_DEMO.spring_and_transaction.service.MemberService_V2;
 
 @Controller
 @RequiredArgsConstructor

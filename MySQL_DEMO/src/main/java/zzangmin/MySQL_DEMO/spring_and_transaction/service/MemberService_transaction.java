@@ -1,12 +1,12 @@
-package zzangmin.MySQL_DEMO.service;
+package zzangmin.MySQL_DEMO.spring_and_transaction.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import zzangmin.MySQL_DEMO.entity.Member;
-import zzangmin.MySQL_DEMO.repository.MemberRepository;
+import zzangmin.MySQL_DEMO.spring_and_transaction.entity.Member;
+import zzangmin.MySQL_DEMO.spring_and_transaction.repository.MemberRepository;
 
 @Service
 @RequiredArgsConstructor
