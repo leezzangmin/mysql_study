@@ -5,6 +5,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import zzangmin.MySQL_DEMO.orderbyrand.entity.Item_rand;
+import zzangmin.MySQL_DEMO.orderbyrand.entity.Item_rand_improved;
+import zzangmin.MySQL_DEMO.orderbyrand.repository.RandRepository;
 import zzangmin.MySQL_DEMO.orderbyrand.service.RandService;
 
 @RestController
@@ -12,17 +14,16 @@ import zzangmin.MySQL_DEMO.orderbyrand.service.RandService;
 public class RandController {
 
     private final RandService randService;
+    private final RandRepository randRepository;
 
     @GetMapping("randGet_V1")
     public List<Item_rand> randGet_V1() {
-        return randService.findAllByRandom();
-
+        return randRepository.findAll();
     }
 
-//    @GetMapping("randGet_V2")
-//    public String randGet_V2() {
-//
-//        return "redirect:/";
-//    }
+    @GetMapping("randGet_V2")
+    public List<Item_rand_improved> randGet_V2() {
+        return randRepository.findAll_improved();
+    }
 
 }
